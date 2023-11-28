@@ -39,11 +39,11 @@ resource "aws_eks_cluster" "example" {
 
   vpc_config {
     subnet_ids = [
-      data.aws_subnet.public.ids["us-east-1a"],
-      data.aws_subnet.public.ids["us-east-1b"],
-      data.aws_subnet.public.ids["us-east-1c"],
-      data.aws_subnet.public.ids["us-east-1d"],
-      data.aws_subnet.public.ids["us-east-1f"],
+      data.aws_subnets.public.ids["us-east-1a"],
+      data.aws_subnets.public.ids["us-east-1b"],
+      data.aws_subnets.public.ids["us-east-1c"],
+      data.aws_subnets.public.ids["us-east-1d"],
+      data.aws_subnets.public.ids["us-east-1f"],
     ]
   }
 
