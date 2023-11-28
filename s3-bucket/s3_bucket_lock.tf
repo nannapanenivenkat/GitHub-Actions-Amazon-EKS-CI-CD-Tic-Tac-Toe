@@ -1,10 +1,10 @@
 # This file should be always run before ant other .tf file
 provider "aws" {
-  region = "us-east-1"
+  region = "ap-south-1"
 }
 # create s3 bucket
 resource "aws_s3_bucket" "s3_bucket" {
-  bucket = "venkat-tic-tac-toe" # change this
+  bucket = "sayantan-tic-tac-toe" # change this
 }
 
 # configure state lock for eks .tfstate file.
