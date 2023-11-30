@@ -40,7 +40,7 @@ resource "aws_eks_cluster" "example" {
   vpc_config {
     subnet_ids = data.aws_subnets.public.ids
     # Specify a different availability zone with sufficient capacity
-    availability_zone = "us-east-1a", "us-east-1b"
+    availability_zones = ["us-east-1a", "us-east-1b"]
   }
 
   # Ensure that IAM Role permissions are created before and deleted after EKS Cluster handling.
