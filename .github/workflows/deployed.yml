@@ -21,7 +21,7 @@ jobs:
           docker rm game
 
       - name: Update kubeconfig
-        run: aws eks --region ap-south-1 update-kubeconfig --name EKS_CLOUD
+        run: aws eks --region us-east-1 update-kubeconfig --name EKS_CLOUD
 
       - name: Deploy to kubernetes
         run: kubectl delete -f deployment-service.yml
